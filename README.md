@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/112856292/220222036-b5a55526-afbc-4cd6-a052-89d5a38a8c4d.png)
 
 
-## 📋 Inhoudsopgave
+## 🌊 Inhoudsopgave
 
 - [Beschrijving](#beschrijving)
 - [Kenmerken](#kenmerken)
@@ -18,11 +18,11 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt get
 
 ## ⚙️ Kenmerken
 
-### Tools
+### ⚡ Tools
 * Visual Studio Code
 * GitHub Desktop 
 
-### Technieken
+### 💃 Technieken
 * HTML
 * CSS
 * JavaScript
@@ -33,9 +33,9 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt get
 
 ## 💯 Checklist
 ### ✔️ Gelukt
+### ❌ Niet gelukt
 
-
-## 🚨 Installatie
+## 💅🏻 Installatie
 
 1. Fork en clone de code
 2. Voer npm install uit in de projectmap
