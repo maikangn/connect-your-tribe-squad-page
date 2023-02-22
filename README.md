@@ -48,7 +48,7 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt get
 * https://whois.fdnd.nl/docs
 * https://fonts.google.com/icons
 
-## Licentie
+## 😮 Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
