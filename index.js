@@ -17,9 +17,22 @@ app.get('/', (request, response) => {
     response.render('index', data);
   })
 
-// app.get('/members', (request, response) => {
-//   response.send('Joepie!!')
-// })
+  // dummy datatables ambition
+  const ambitions = ['Frontend engineer', 'HTML/CSS developer', 'Frontend webdesigner', 'Not yet defined'];
+  data.squad.members.forEach(function(member) {
+  if (!member.ambition) {
+  // Pak een random ambition en zet deze in de member
+  member.ambition = ambitions[Math.floor(Math.random() * ambitions.length)]
+  }
+  })
+
+  //  dummy datatables skills
+  const skills = ['TheWizard TheEnthusiast TheInventer TheMashUp']
+  data.squad.members.forEach(function(member) {
+    if (!member.skills) {
+      member.skills = skills(Math.floor(Math.random() * skills.length))
+    }
+  })
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
