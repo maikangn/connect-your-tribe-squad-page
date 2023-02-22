@@ -1,9 +1,9 @@
-# Squadpage "Twitter feed" Squad C
+# 🕊️ Squadpage "Twitter feed" Squad C 🕊️
 
 ![image](https://user-images.githubusercontent.com/112856292/220222036-b5a55526-afbc-4cd6-a052-89d5a38a8c4d.png)
 
 
-## Inhoudsopgave
+## 📋 Inhoudsopgave
 
 - [Beschrijving](#beschrijving)
 - [Kenmerken](#kenmerken)
@@ -12,11 +12,11 @@
 - [Bronnen](#bronnen)
 - [Licentie](#licentie)
 
-## Beschrijving
+## ✏️ Beschrijving
 De opdracht was om een nieuwe squadpagina te redesignen op basis van een bestaande API, namelijk de FDND REST API.
 Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt getoond per Tweet.
 
-## Kenmerken
+## ⚙️ Kenmerken
 
 ### Tools
 * Visual Studio Code
@@ -31,21 +31,22 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt get
 * Express
 * REST API
 
-## Checklist
+## 💯 Checklist
 ### ✔️ Gelukt
 
 
-## Installatie
+## 🚨 Installatie
 
 1. Fork en clone de code
 2. Voer npm install uit in de projectmap
 3. Voer npm start uit en open het voorbeeld in je browser bij ``http://localhost:8000``
 
-## Gebruik
+## 🗿 Gebruik
 
-## Bronnen
+## 💌 Bronnen
 
-https://whois.fdnd.nl/docs
+* https://whois.fdnd.nl/docs
+* https://fonts.google.com/icons
 
 ## Licentie
 
