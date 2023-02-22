@@ -32,15 +32,14 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt get
 * REST API
 
 ## Checklist
-### Must haves
+### ✔️ Gelukt
 
-### Could haves
 
 ## Installatie
 
 1. Fork en clone de code
 2. Voer npm install uit in de projectmap
-3. Voer npm start uit en open het voorbeeld in je browser
+3. Voer npm start uit en open het voorbeeld in je browser bij ``http://localhost:8000``
 
 ## Gebruik
 
