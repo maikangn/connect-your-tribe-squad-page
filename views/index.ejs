@@ -1,154 +1,183 @@
 <%- include('./partials/head.ejs') %>
 
-  <!-- sidebar starts -->
-  <div class="sidebar">
-     <i class="fab fa-twitter"></i> 
+<!-- sidebar starts -->
+<div class="sidebar">
+  <i class="fab fa-twitter"></i>
   <span class="fdnd">FDND</span>
-  
-    <div class="sidebarOption active">
-      <span class="material-icons"> home </span>
-      <p class="squad-title"><%= squad.name %></p>
-    </div>
 
-    <div class="sidebarOption">
-      <span class="material-icons"> public </span>
-      <h2>Explore</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> notifications_none </span>
-      <h2>Notifications</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> mail_outline </span>
-      <h2>Messages</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> bookmark_border </span>
-      <h2>Bookmarks</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> list_alt </span>
-      <h2>Lists</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> perm_identity </span>
-      <h2>Profile</h2>
-    </div>
-
-    <div class="sidebarOption">
-      <span class="material-icons"> more_horiz </span>
-      <h2>More</h2>
-    </div>
-    <button class="sidebar__tweet">Tweet</button>
+  <div class="sidebarOption active">
+    <span class="material-icons"> home </span>
+    <p class="squad-title"><%= squad.name %></p>
   </div>
-  <!-- sidebar ends -->
 
-  <!-- feed starts -->
-  <div class="feed">
-    <div class="feed__header">
-      <h2>Home</h2>
+  <div class="sidebarOption">
+    <span class="material-icons"> public </span>
+    <h2>Explore</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> notifications_none </span>
+    <h2>Notifications</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> mail_outline </span>
+    <h2>Messages</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> bookmark_border </span>
+    <h2>Bookmarks</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> list_alt </span>
+    <h2>Lists</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> perm_identity </span>
+    <h2>Profile</h2>
+  </div>
+
+  <div class="sidebarOption">
+    <span class="material-icons"> more_horiz </span>
+    <h2>More</h2>
+  </div>
+  <button class="sidebar__tweet">Tweet</button>
+</div>
+<!-- sidebar ends -->
+
+<!-- feed starts -->
+<div class="feed">
+  <div class="feed__header">
+    <h2>Home</h2>
+  </div>
+
+  <!-- tweetbox starts -->
+  <div class="tweetBox">
+    <form>
+      <div class="tweetbox__input">
+        <img src="/hancock.jpg" alt="Chopper avatar" />
+        <input
+          type="text"
+          placeholder="Welkom bij de squadpage van <%= squad.name %>! ✨" />
+      </div>
+      <button class="tweetBox__tweetButton">Tweet</button>
+    </form>
+  </div>
+  <!-- tweetbox ends -->
+
+  <!-- post starts -->
+  <div class="post">
+    <% squad.members.forEach(member => { %>
+    <div class="post__avatar">
+      <% if (member.avatar) { %>
+      <a href="<%= member.website %>" target="_blank"
+        ><img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"
+      /></a>
+      <% }else{ %>
+      <img src="/luffy2.jpg" alt="Placeholder avatar" />
+      <% } %>
     </div>
 
-    <!-- tweetbox starts -->
-    <div class="tweetBox">
-      <form>
-        <div class="tweetbox__input">
-          <img
-            src="/hancock.jpg"
-            alt="Chopper avatar"
-          />
-          <input type="text" placeholder="Welkom bij de squadpage van <%= squad.name %>! ✨" />
+    <div class="post__body">
+      <div class="post__header">
+        <div class="post__headerText">
+          <h3>
+            <a href="<%= member.website %>" target="_blank">
+              <%= member.name %> <%= member.prefix %> <%= member.surname %></a
+            >
+            <span class="post__headerSpecial">
+              <span class="material-icons post__badge"> verified </span>@<% if
+              (member.nickname) { %><%= member.nickname %> <% }else{ %><%=
+              member.slug %> <% } %>
+            </span>
+          </h3>
         </div>
-        <button class="tweetBox__tweetButton">Tweet</button>
-      </form>
-    </div>
-    <!-- tweetbox ends -->
-
-    <!-- post starts -->
-    <div class="post">
-      <% squad.members.forEach(member => { %>
-      <div class="post__avatar">
-        <% if (member.avatar) { %>
-         <a href="<%= member.website %>" target="_blank"><img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"/></a>
+        <div class="post__headerDescription">
+          <% if (member.bio) { %>
+          <p><%- member.bio.html %></p>
           <% }else{ %>
-          <img src="/luffy2.jpg" alt="Placeholder avatar" />
+          <p>
+            Hi, I am <%= member.name %> <%= member.prefix %> <%= member.surname
+            %> and I am a first year FDND student :)
+          </p>
           <% } %>
+        </div>
       </div>
 
-      <div class="post__body">
-        <div class="post__header">
-          <div class="post__headerText">
-            <h3>
-              <a href="<%= member.website %>" target="_blank"> <%= member.name %> <%= member.prefix %> <%= member.surname %></a>
-              <span class="post__headerSpecial">
-                <span class="material-icons post__badge"> verified </span>@<% if (member.nickname) { %><%= member.nickname %>
-                  <% }else{ %><%= member.slug %>
-                    <% } %>
-              </span>
-            </h3>
-          </div>
-          <div class="post__headerDescription">
-            <% if (member.bio) { %>
-              <p><%- member.bio.html %></p>
-              <% }else{ %>
-                <p>Hi, I am <%= member.name %> <%= member.prefix %> <%= member.surname %> and I am a first year FDND student :)</p>
-                <% } %>
-          </div>
+      <div class="post__footer">
+        <div class="comment">
+          <span class="material-symbols-outlined"> mode_comment </span>
         </div>
-      
-        <div class="post__footer">
-          <div class="comment">
-            <span class="material-symbols-outlined">
-            mode_comment
-            </span>
-          </div>
-         <div class="retweet">
+        <div class="retweet">
           <span class="material-icons"> repeat </span>
-         </div>
-          <div class="like">
-            <span class="material-icons"> favorite_border </span>
-          </div>
-          <span class="material-symbols-outlined">
-            bookmark
-            </span>
-            <span class="material-symbols-outlined">
-              ios_share
-              </span>
         </div>
+        <div class="like">
+          <span class="material-icons"> favorite_border </span>
+        </div>
+        <span class="material-symbols-outlined"> bookmark </span>
+        <span class="material-symbols-outlined"> ios_share </span>
       </div>
-      <hr>
-      <% }) %>
     </div>
-    <!-- post ends -->
+    <hr />
+    <% }) %>
   </div>
-  <!-- feed ends -->
+  <!-- post ends -->
+</div>
+<!-- feed ends -->
 
-  <!-- widgets starts -->
-  <div class="widgets">
-    <div class="widgets__input">
-      <span class="material-icons widgets__searchIcon"> search </span>
-      <input type="text" placeholder=" Search <%= squad.name %>" />
-    </div>
-
-    <div class="widgets__widgetContainer">
-      <h2>Who to follow</h2>
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">Wij zijn zojuist vol lof gevisiteerd door de NVAO. Het oordeel,
-           de Ad Frontend Design &amp; Development aan de HvA mag september 2021 starten! Nederland heeft een 
-        <a href="https://twitter.com/hashtag/frontend?src=hash&amp;ref_src=twsrc%5Etfw">#frontend</a> opleiding!
-        <a href="https://t.co/WXlocWb3mW">https://t.co/WXlocWb3mW</a></p>
-        &mdash; Justus Sturkenboom (@ju5tu5) 
-        <a href="https://twitter.com/ju5tu5/status/1382715000087805955?ref_src=twsrc%5Etfw"
-        >April 15, 2021</a>
-      </blockquote>
-         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+<!-- widgets starts -->
+<div class="widgets">
+  <div class="widgets__input">
+    <span class="material-icons widgets__searchIcon"> search </span>
+    <input type="text" placeholder=" Search <%= squad.name %>" />
   </div>
-  <!-- widgets ends -->
+
+  <div class="widgets__widgetContainer">
+    <h2>Spot your squad-leads ambitions</h2>
+    <a
+      href="/?ambition=Frontend engineer"
+      aria-label="filter option frontend engineer"
+      >Frontend engineer</a
+    >
+    <a
+      href="/?ambition=HTML/CSS developer"
+      aria-label="filter option HTML/CSS developer"
+      >HTML/CSS developer</a
+    >
+    <a
+      href="/?ambition=Frontend webdesigner"
+      aria-label="filter option Frontendwebdesigner"
+      >Frontend webdesigner</a
+    >
+    <a
+      href="/?ambition=Not yet defined"
+      aria-label="filter option not yet difined"
+      >Not yet defined</a
+    >
+
+    <h2>Spot your squad-leads skills</h2>
+    <a href="/?skills=TheWizard" aria-label="filter option the wizard"
+      >#TheWizard</a
+    >
+    <a href="/?skills=TheEnthusiast" aria-label="filter option the enthusiast"
+      >#TheEnthusiast</a
+    >
+    <a href="/?skills=TheInventer" aria-label="filter option the inventer"
+      >#TheInventer</a
+    >
+    <a href="/?skills=TheMashUp" aria-label="filter option the mash up"
+      >#TheMashUp</a
+    >
+
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"></script>
+  </div>
+</div>
+<!-- widgets ends -->
 
 <%- include('./partials/foot.ejs') %>
