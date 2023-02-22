@@ -13,10 +13,27 @@
 - [Licentie](#licentie)
 
 ## Beschrijving
-
-Een live-coded voorbeeld van een overzichtspagina gemaakt met Express.js en EJS, welke gebruik maakt van configuratie in een `.env` bestand.
+De opdracht was om een nieuwe squadpagina te redesignen op basis van een bestaande API, namelijk de FDND REST API.
+Deze site is gebaseerd op Twitter waarbij elke squadmember wordt getoond per Tweet.
 
 ## Kenmerken
+
+### Tools
+* Visual Studio Code
+* GitHub Desktop 
+
+### Technieken
+* HTML
+* CSS
+* JavaScript
+* Node
+* EJS
+* Express
+
+## Checklist
+### Must haves
+
+### Could haves
 
 ## Installatie
 
@@ -28,10 +45,7 @@ Een live-coded voorbeeld van een overzichtspagina gemaakt met Express.js en EJS,
 
 ## Bronnen
 
-https://expressjs.com/en/4x/api.html
-https://ejs.co/
-https://www.npmjs.com/package/dotenv
-https://whois.fdnd.nl/docs/squad#slug
+https://whois.fdnd.nl/docs
 
 ## Licentie
 
