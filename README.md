@@ -14,7 +14,7 @@
 
 ## Beschrijving
 De opdracht was om een nieuwe squadpagina te redesignen op basis van een bestaande API, namelijk de FDND REST API.
-Deze site is gebaseerd op Twitter waarbij elke squadmember wordt getoond per Tweet.
+Deze site is gebaseerd op Twitter waarbij elke squadmember uit Squad C wordt getoond per Tweet.
 
 ## Kenmerken
 
@@ -29,6 +29,7 @@ Deze site is gebaseerd op Twitter waarbij elke squadmember wordt getoond per Twe
 * Node
 * EJS
 * Express
+* REST API
 
 ## Checklist
 ### Must haves
