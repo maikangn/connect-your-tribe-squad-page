@@ -375,6 +375,126 @@ gap: 1.5em;
 
 
 /* Media queries */
+/*Tablet*/
+@media only screen and (max-width: 75em) {
+  body {
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+  }
+ 
+  .feed {
+  display: grid;
+  border-left: 1px solid var(--twitter-background);
+  border-right: 1px solid var(--twitter-background);
+  min-width: fit-content;
+  overflow-y: scroll;
+}
+
+.tweetbox__input input {
+  flex: 1;
+  margin-left: 0.9em;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+}
+
+.sidebarOption h2 {
+  font-weight: 500;
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+.squad-title2{
+  font-weight: lighter;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.squad-title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.sidebar {
+  border-right: 0px solid;
+  min-width: 220px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidebar__tweet {
+  width: 100%;
+  background-color: var(--twitter-color);
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  height: 45px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+.post {
+  display: grid;
+  align-items: flex-start;
+  padding: 0.7em;
+  max-width: 37em;
+}
+
+/* name/surname */
+.post__headerText h3 {
+  margin-left: 4.3em;
+  font-size: 1em;
+  margin-bottom: 5px;
+  margin-top: -2em;
+}
+
+/* bio */
+.post__headerDescription {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 4.8em;
+  font-size: 0.9em;
+}
+
+.post__avatar img {
+  display: flex;
+  border-radius: 50%;
+  height: 50px;
+  margin-bottom: -80px;
+  margin-left: -0.8em;
+}
+
+.post__badge {
+  font-size: 16px !important;
+  color: var(--twitter-color);
+  margin-right: 5px;
+}
+
+.widgets__widgetContainer {
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 20px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
+}
+
+.widgets__widgetContainer h2 {
+  font-size: 1.1em;
+  font-weight: 800;
+  padding-left: .5em;
+}
+}
+
+/* Mobile version*/
+
 @media only screen and (max-width: 31em) {
   body {
     font-family: Helvetica, Arial, Helvetica, sans-serif;
@@ -483,3 +603,5 @@ gap: 1.5em;
   padding-left: .5em;
 }
 }
+
+
