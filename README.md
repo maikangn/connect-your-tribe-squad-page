@@ -1,7 +1,6 @@
 # 🕊️ Squadpage "Twitter feed" Squad C 🕊️
-
-![image](https://user-images.githubusercontent.com/112856292/220222036-b5a55526-afbc-4cd6-a052-89d5a38a8c4d.png)
-
+![image](https://user-images.githubusercontent.com/112856292/220998030-4719d33f-8026-4c3b-9878-958d2a024fb4.png)
+Dit is de uiteindelijke versie geworden die live staat nadat wij als team elementen van elkaars squadpage hebben toegevoegd. <BR><BR>
 
 ## 🌊 Inhoudsopgave
 
