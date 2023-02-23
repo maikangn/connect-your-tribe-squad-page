@@ -1,6 +1,6 @@
 # 🕊️ Squadpage "Twitter feed" Squad C 🕊️
 ![image](https://user-images.githubusercontent.com/112856292/220998030-4719d33f-8026-4c3b-9878-958d2a024fb4.png)<BR>
-Dit is de uiteindelijke versie geworden die live staat nadat wij als team elementen van elkaars squadpage hebben toegevoegd. 
+Dit is de uiteindelijke versie geworden die live staat nadat wij als team (Michelle, Jalal en Zenit) elementen van elkaars squadpage hebben toegevoegd. 
 
 ## 🌊 Inhoudsopgave
 
