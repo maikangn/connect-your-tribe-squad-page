@@ -5,11 +5,12 @@
 }
 
 body {
-  --twitter-color: #1DA1F2;
+  --twitter-color: #1da1f2;
   --twitter-background: #e6ecf0;
 }
 
-h1, h2{
+h1,
+h2 {
   font-size: 1.2em;
 }
 
@@ -17,26 +18,63 @@ h1, h2{
   font-weight: 600;
   border: 1px solid var(--twitter-color);
   border-radius: 7px;
-  box-shadow: calc(-1*5px) 5px 0 0 var(--twitter-color);
+  box-shadow: calc(-1 * 5px) 5px 0 0 var(--twitter-color);
   color: var(--twitter-color);
   text-transform: lowercase;
   padding: 0.5rem 1rem;
   font-size: 2rem;
 }
 
+/* Dit heeft Jalal gemaakt */
 .sidebarOption {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
+.sidebarOption > ul{
+  margin-left: 3em;
+}
+
+.sidebarOption > ul > li{
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.sidebarOption > ul > li > a{
+  text-decoration: none;
+}
+
+.sidebarOption > ul > li > a:hover{
+color: var(--twitter-color);
+}
+
+.sidebarOption:nth-of-type(2){
+  position: relative;
+  bottom: .7em;
+}
+
+.sidebarOption:nth-of-type(3){
+  position: relative;
+  bottom: .7em;
+}
+
+/* TOT HIER heeft Jalal gemaakt */
+
 .sidebarOption .material-icons,
 .fa-twitter {
   padding: 20px;
 }
 
-.squad-title{
+.squad-title {
   font-weight: bold;
+  font-size: 1.25em;
+}
+
+.squad-title2{
+  font-weight: lighter;
+  font-weight: 500;
   font-size: 1.25em;
 }
 
@@ -167,22 +205,22 @@ body {
 
 /* tweet posts */
 .post__avatar img {
- display: flex;
+  display: flex;
   border-radius: 50%;
   height: 60px;
   margin-bottom: -80px;
 }
 
-a{
+a {
   color: black;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
 }
 
-
 a:hover {
- text-decoration: underline;
+  text-decoration: underline;
 }
 
 hr {
@@ -237,6 +275,12 @@ hr {
   font-size: 15px;
 }
 
+.post__headerDescription span {
+  color: var(--twitter-color);
+  font-weight: 600;
+  text-align: left;
+}
+
 .post__body {
   flex: 1;
   padding: 10px;
@@ -248,26 +292,26 @@ hr {
 
 /* interaction feed */
 .retweet:hover {
-  background-color:rgb(172, 233, 172);
+  background-color: rgb(172, 233, 172);
   color: green;
   width: 30px;
   height: 30px;
   padding-left: 3px;
   border-radius: 50%;
-  transition: all .25s ease; 
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 
 .like:hover {
   color: red;
   cursor: pointer;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .comment:hover {
   color: var(--twitter-color);
   cursor: pointer;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 /* widgets */
@@ -302,7 +346,28 @@ hr {
   border-radius: 20px;
 }
 
+/* Dit heeft Jalal gemaakt */
+
+.widgets__widgetContainer > article{
+display: flex;
+flex-direction: column;
+gap: 1.5em;
+}
+
+.widgets__widgetContainer > article:nth-child(2){
+  margin-top: 2em;
+}
+
 .widgets__widgetContainer h2 {
   font-size: 18px;
   font-weight: 800;
+  padding-left: .5em;
+}
+
+.widgets__widgetContainer > article > a:hover{
+  color: var(--twitter-color);
+}
+
+.widgets__widgetContainer > article > div{
+  display: flex;
 }
