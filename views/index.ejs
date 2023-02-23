@@ -73,111 +73,113 @@
     <% squad.members.forEach(member => { %>
     <div class="post__avatar">
       <% if (member.avatar) { %>
-      <a href="<%= member.website %>" target="_blank"
-        ><img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"
-      /></a>
-      <% }else{ %>
-      <img src="/luffy2.jpg" alt="Placeholder avatar" />
-      <% } %>
+       <a href="<%= member.website %>" target="_blank"><img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"/></a>
+        <% }else{ %>
+        <img src="/luffy2.jpg" alt="Placeholder avatar" />
+        <% } %>
     </div>
-
     <div class="post__body">
       <div class="post__header">
         <div class="post__headerText">
           <h3>
-            <a href="<%= member.website %>" target="_blank">
-              <%= member.name %> <%= member.prefix %> <%= member.surname %></a
-            >
+            <a href="<%= member.website %>" target="_blank"> <%= member.name %> <%= member.prefix %> <%= member.surname %></a>
             <span class="post__headerSpecial">
-              <span class="material-icons post__badge"> verified </span>@<% if
-              (member.nickname) { %><%= member.nickname %> <% }else{ %><%=
-              member.slug %> <% } %>
+              <span class="material-icons post__badge"> verified </span>@<% if (member.nickname) { %><%= member.nickname %>
+                <% }else{ %><%= member.slug %>
+                  <% } %>
             </span>
           </h3>
         </div>
         <div class="post__headerDescription">
           <% if (member.bio) { %>
-          <p><%- member.bio.html %></p>
-          <% }else{ %>
-          <p>
-            Hi, I am <%= member.name %> <%= member.prefix %> <%= member.surname
-            %> and I am a first year FDND student :)
-          </p>
-          <% } %>
+            <p><%- member.bio.html %></p>
+            <% }else{ %>
+              <p>Hi, I am <%= member.name %> <%= member.prefix %> <%= member.surname %> and I am a first year FDND student :)</p>
+              <% } %>
         </div>
       </div>
-
+    
       <div class="post__footer">
         <div class="comment">
-          <span class="material-symbols-outlined"> mode_comment </span>
+          <span class="material-symbols-outlined">
+          mode_comment
+          </span>
         </div>
-        <div class="retweet">
-          <span class="material-icons"> repeat </span>
-        </div>
+       <div class="retweet">
+        <span class="material-icons"> repeat </span>
+       </div>
         <div class="like">
           <span class="material-icons"> favorite_border </span>
         </div>
-        <span class="material-symbols-outlined"> bookmark </span>
-        <span class="material-symbols-outlined"> ios_share </span>
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+          <span class="material-symbols-outlined">
+            ios_share
+            </span>
       </div>
     </div>
-    <hr />
+    <hr>
     <% }) %>
   </div>
-  <!-- post ends -->
-</div>
-<!-- feed ends -->
+      <!-- post ends -->
+    </div>
+    <!-- feed ends -->
 
-<!-- widgets starts -->
-<div class="widgets">
-  <div class="widgets__input">
-    <span class="material-icons widgets__searchIcon"> search </span>
-    <input type="text" placeholder=" Search <%= squad.name %>" />
+    <!-- widgets starts -->
+    <div class="widgets">
+      <div class="widgets__input">
+        <span class="material-icons widgets__searchIcon"> search </span>
+        <input type="text" placeholder=" Search <%= squad.name %>" />
+      </div>
+
+      <div class="widgets__widgetContainer">
+        <h2>Spot your squad-leads ambitions</h2>
+        <a
+          href="/?ambition=Frontend engineer"
+          aria-label="filter option frontend engineer"
+          >Frontend engineer</a
+        >
+        <a
+          href="/?ambition=HTML/CSS developer"
+          aria-label="filter option HTML/CSS developer"
+          >HTML/CSS developer</a
+        >
+        <a
+          href="/?ambition=Frontend webdesigner"
+          aria-label="filter option Frontendwebdesigner"
+          >Frontend webdesigner</a
+        >
+        <a
+          href="/?ambition=Not yet defined"
+          aria-label="filter option not yet difined"
+          >Not yet defined</a
+        >
+
+        <h2>Spot your squad-leads skills</h2>
+        <a href="/?skills=TheWizard" aria-label="filter option the wizard"
+          >#TheWizard</a
+        >
+        <a
+          href="/?skills=TheEnthusiast"
+          aria-label="filter option the enthusiast"
+          >#TheEnthusiast</a
+        >
+        <a href="/?skills=TheInventer" aria-label="filter option the inventer"
+          >#TheInventer</a
+        >
+        <a href="/?skills=TheMashUp" aria-label="filter option the mash up"
+          >#TheMashUp</a
+        >
+
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"></script>
+      </div>
+    </div>
+    <!-- widgets ends -->
+
+    <%- include('./partials/foot.ejs') %>
   </div>
-
-  <div class="widgets__widgetContainer">
-    <h2>Spot your squad-leads ambitions</h2>
-    <a
-      href="/?ambition=Frontend engineer"
-      aria-label="filter option frontend engineer"
-      >Frontend engineer</a
-    >
-    <a
-      href="/?ambition=HTML/CSS developer"
-      aria-label="filter option HTML/CSS developer"
-      >HTML/CSS developer</a
-    >
-    <a
-      href="/?ambition=Frontend webdesigner"
-      aria-label="filter option Frontendwebdesigner"
-      >Frontend webdesigner</a
-    >
-    <a
-      href="/?ambition=Not yet defined"
-      aria-label="filter option not yet difined"
-      >Not yet defined</a
-    >
-
-    <h2>Spot your squad-leads skills</h2>
-    <a href="/?skills=TheWizard" aria-label="filter option the wizard"
-      >#TheWizard</a
-    >
-    <a href="/?skills=TheEnthusiast" aria-label="filter option the enthusiast"
-      >#TheEnthusiast</a
-    >
-    <a href="/?skills=TheInventer" aria-label="filter option the inventer"
-      >#TheInventer</a
-    >
-    <a href="/?skills=TheMashUp" aria-label="filter option the mash up"
-      >#TheMashUp</a
-    >
-
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"></script>
-  </div>
 </div>
-<!-- widgets ends -->
-
-<%- include('./partials/foot.ejs') %>
