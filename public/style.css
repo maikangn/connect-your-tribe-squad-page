@@ -441,7 +441,7 @@ gap: 1.5em;
 /* name/surname */
 .post__headerText h3 {
   margin-left: 4.3em;
-  font-size: 0.9em;
+  font-size: 0.85em;
   margin-bottom: 5px;
   margin-top: -1.85em;
 }
@@ -450,14 +450,14 @@ gap: 1.5em;
 .post__headerDescription {
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 4.5em;
-  font-size: 0.85em;
+  margin-left: 5.2em;
+  font-size: 0.7em;
 }
 
 .post__avatar img {
   display: flex;
   border-radius: 50%;
-  height: 50px;
+  height: 45px;
   margin-bottom: -80px;
   margin-left: -0.8em;
 }
@@ -466,6 +466,14 @@ gap: 1.5em;
   font-size: 16px !important;
   color: var(--twitter-color);
   margin-right: 5px;
+}
+
+.widgets__widgetContainer {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
 }
 
 }
