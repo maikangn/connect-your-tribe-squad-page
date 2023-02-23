@@ -2,12 +2,12 @@
 
 <!-- sidebar starts -->
 <div class="sidebar">
-  <i class="fab fa-twitter"></i>
-  <span class="fdnd">FDND</span>
+  <a href="/"> <i class="fab fa-twitter"></i></a>
+<span class="fdnd">FDND</span>
 
   <div class="sidebarOption active">
     <span class="material-icons"> home </span>
-    <p class="squad-title"><%= squad.name %></p>
+   <a href="/" class="home"> <p class="squad-title"><%= squad.name %></p></a>
   </div>
 
   <div class="sidebarOption">
@@ -39,11 +39,6 @@
   <div class="sidebarOption">
     <span class="material-icons"> bookmark_border </span>
     <h2>Bookmarks</h2>
-  </div>
-
-  <div class="sidebarOption">
-    <span class="material-icons"> list_alt </span>
-    <h2>Lists</h2>
   </div>
 
   <div class="sidebarOption">
@@ -192,8 +187,9 @@
         </a>
       </article>
     </div>
+  </div>
     <!-- widgets ends -->
 
     <%- include('./partials/foot.ejs') %>
-  </div>
-</div>
+
+

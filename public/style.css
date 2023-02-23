@@ -212,8 +212,9 @@ body {
 }
 
 a {
-  color: black;
+  color: #000;
 }
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -370,4 +371,101 @@ gap: 1.5em;
 
 .widgets__widgetContainer > article > div{
   display: flex;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 31em) {
+  body {
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    justify-content: center;
+  }
+  .feed {
+  display: grid;
+  border-right: 1px solid var(--twitter-background);
+  min-width: fit-content;
+  overflow-y: scroll;
+}
+
+.tweetbox__input input {
+  flex: 1;
+  margin-left: 0.9em;
+  font-size: 0.85em;
+  border: none;
+  outline: none;
+}
+
+.sidebarOption h2 {
+  font-weight: 500;
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+.squad-title2{
+  font-weight: lighter;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.squad-title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.sidebar {
+  border-right: 0px solid;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidebar__tweet {
+  width: 50%;
+  background-color: var(--twitter-color);
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  height: 45px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* name/surname */
+.post__headerText h3 {
+  margin-left: 4.3em;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  margin-top: -1.85em;
+}
+
+/* bio */
+.post__headerDescription {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 4.5em;
+  font-size: 0.85em;
+}
+
+.post__avatar img {
+  display: flex;
+  border-radius: 50%;
+  height: 50px;
+  margin-bottom: -80px;
+  margin-left: -0.8em;
+}
+
+.post__badge {
+  font-size: 16px !important;
+  color: var(--twitter-color);
+  margin-right: 5px;
+}
+
 }
