@@ -384,10 +384,11 @@ gap: 1.5em;
     margin-left: auto;
     margin-right: auto;
     padding: 0 10px;
-    justify-content: center;
   }
+
   .feed {
   display: grid;
+  border-left: 1px solid var(--twitter-background);
   border-right: 1px solid var(--twitter-background);
   min-width: fit-content;
   overflow-y: scroll;
